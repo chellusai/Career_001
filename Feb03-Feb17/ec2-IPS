@@ -1,0 +1,73 @@
+=========================================================================================================
+public Ipaddress : Ec2 instance to login and application given to enduser.
+
+it is visible in AWS console dash board only..
+
+Ec2 instance ==>>> stop and start ==>> public Ipaddress will automatically changed ==>> because it is dynamic.
+
+public ip is dynamic ==>>> application ==>> not going to EU..==>> business impact ..
+
+To over come this ==>> ELAstic IPaddress..
+
+
+private IPaddress : It is used to internal communication.
+
+it is visible in AWS console dash board and ec2 instance.
+
+Ec2 instance ==>>> stop and start ==>> private Ipaddress will not be changed ==>> because it is static.
+
+
+Elastic IPaddress  ( real time ): It is similar to public IPaddress.
+
+Ec2 instance to login and application given to enduser.
+
+it is visible in AWS console dash board only..
+
+Ec2 instance ==>>> stop and start ==>> Elastic Ipaddress will not be changed ==>> because it is static.
+
+Elastic IPaddress ==>> purchasable one. ==>> bill..
+
+===============================================================================
+
+
+public IP address :  18.179.42.0 / 18.181.197.67
+
+private IPaddress :  50.20.9.151 / 50.20.9.151
+
+Elastic IP :   54.95.201.23 / 54.95.201.23
+
+===========================================================================================
+
+===========================================================================================
+
+
+Public subnet : 
+
+A subnet which is directly exposed to internet it is called public subnet.
+
+internetgateway attached to routing table then this subnet is called public subnet.
+
+public subnet : application instances and web servers..
+
+these instances are accessed all endusers ==>>> these instances are having public Ip / elastic IP.
+
+These instances are accessed via public ip /elastic IP address..
+
+
+private subnet :
+
+A subnet which is not directly exposed to internet it is called private subnet.
+
+internetgateway not attached to routing table then this subnet is called private subnet.
+
+private subnet : database , backup , storage ..etc
+
+These instances are not accessable to enduser. 
+
+these instances are not having public Ip / Elastic IP..
+
+These instances are not accessed via public or elastic IP.
+
+These instances are accessed only through Private Ip address only..
+
+===================================================================================

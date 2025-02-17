@@ -1,0 +1,81 @@
+NAT instance : Network address translation.
+
+The main purpose of NAT instance is to grant or provide internet access to privatesubnet.
+
+In general ==>>> database , backup , storage instances are no need of internet access..
+
+private subnet : database , backup , storage ..etc ==>> update or upgrade ==>>> then these instances required internet access..
+
+NAT instance thumbrule :
+
+NAT instance must be launched in public subnet.
+
+inbound rules / inbound access / inbound traffic ==>> internet ==>> internetgatway to ec2 instance
+
+outbound rules / outbound access / outbound traffic ==>> internet ==>> ec2instance to  internetgatway
+
+NAT follows outbound rules..
+
+NAT instance ==>> launch instance ==>>> community AMI's ===>> search ==>>> nat ===>> no .of nat instances to display ==>> choose any one ==>>> normal ec2 instance creation steps..
+
+select NAT instance ==>> actions ==>>> networking ==>> change source/destination check ==>> defaultly enable state. ===>>> we will do this desable ==>> stop ( check box ==>> check).
+
+==>> first NAt instance ===>> Db instance ==>> SSH configuration. ==>> now you are in db instance..
+
+ping google.com 
+
+ping gmail.com
+
+ping fb.com
+
+==>>> ping success...
+
+========================================================================================
+
+========================================================================================
+
+NATGATEWAY : to grant or provide internet access to private subnet.
+
+NATgateway also follows outbound traffic..
+
+public subnet : web servers
+
+privatesubnet : database , storage , backup , ... ( publicly not accessable) -->> no public IP i.e private Ip
+
+NATgateway : high availability and it is maintaintained by AWS.
+
+NAt instance -->> not having  high availability and it is maintained by us.
+
+NAT instance also we make it as high availability  --->> script --->>> HA .
+
+NAt instance must be launched in public subnet -->> community AMI's -->> search -->nat
+
+Natgateway must be launched in public subnet.
+
+Natgateway is the same process of infrastructure creating of NAT instance..
+
+VPC --->>> NGVPC -->> 30.20.0.0/16
+
+IGW -->> NGIGW -->> attach -->> NGVPC
+
+create two subnets -->> 1. ngpublicsubnet 2. ngprivatesubnet
+
+MRTB -->>attach -->>IGW and ngpublicsubnet
+
+create one ec2 instance ( normal ) under public subnet.
+
+create --->>NATGATEWAY --->> public subnet.
+
+note : natgateway must having elastic IP 
+
+CRTB --->>> 0.0.0.0/0 --->> natgateway and attach ngprivate subnet
+
+create one more instance --->> under privatesubnet ( storage) --->>> autoassign publicip -->>desable
+
+final : login into the public subnet instance -->> configure ssh configuration --->>>> login into storage instance with the help of private IP
+
+ping google.com
+
+ping success
+
+=================================================================================

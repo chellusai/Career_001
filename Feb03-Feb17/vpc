@@ -1,0 +1,110 @@
+AWS : keycomponents :
+
+1. VPC
+
+2. Internetgateway
+
+3. subnets
+
+4. routing tables
+
+5. security group.
+
+====================================
+
+1. VPC : virtual private cloud.
+
+1. It is an isolated network in the cloud.
+
+2. Vpc is region specific.
+
+3. Every region has one default vpc. ==>>> do not delete this.
+
+4. Suupose if we accidentally delete this we will create support case to AWS people. 
+
+5. vpc is free of cost.
+
+6. we will create 5 vpc's per region ( AWS free-tier ).
+
+7. Vpc has a CIDR notation ==>> /16.
+
+====================================================
+
+2. Internet gateway :
+
+1. It is the gateway to all endusers to access application.
+
+2. Intergateway is the region specific.
+
+3. Every region has one deafult internetgateway ==>> do not delete this..
+
+4. Internet gateway is the free of cost.
+
+5. Internetgateway also has a CIDR notation ==>> 0.0.0.0/0
+
+6. We will create multiple internetgateways under one VPC.
+
+7. Internetgatway is attached to VPC and routingtables.
+
+=================================================================================
+
+3. subnets :
+
+1. It is a smaller network inside VPC.
+
+2. We will create multiple subnets under one VPC.
+
+3. subnets are availability zone specific.
+
+4. subnets are also having cidr notattion ==>> /24
+
+5. subnets are free of cost.
+
+6. subnets are attached to routing tables.
+
+7. Every region has multiple subnets.
+
+8. every region has default subnets ===>> do not delete this.
+
+==================================================================================
+
+4. routing tables :
+
+1. It is virtual router in the cloud.
+
+2. The main purpose of routing tables is to communicate with the diffrent networks.
+
+3. Routing tables are region specific.
+
+4. Routing tables are free of cost.
+
+5. Every region has one default routing table ==>>> do not delete this.
+
+5. when ever we create a vpc then automatically aws implicitely creates a routing table ==>> main routing table.
+
+6. we will also create our own routing tables ===>> custom routing tables.
+
+7. routing tables are attached to internetgateway and subnets.
+
+=========================================================================
+
+5. security group :
+
+1. it is a virtual firewall at ec2 instance level.
+
+2. It conatins set of rules..( ssh , http ,https , mysql ,alltraffic...etc)
+
+3. security group ==>> source ==>> 3 fields
+
+1. anywhere 2. custom 3. myip
+
+4. security groups are region specific.
+
+5. security groups are free of cost.
+
+6. Every region has one default security group ===>>> do not delete this.
+
+7. Security groups has inboundrules and outboundrules.
+
+=========================================================================================================
+

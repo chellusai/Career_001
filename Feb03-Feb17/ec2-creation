@@ -1,0 +1,25 @@
+ec2 : elastic cloud compute : ec2 ==>>> virtal machine. ==>>> ec2 instance.
+
+AMI ==>> Amazon machine image 
+
+Every AMI has their own identification number ===>> AMI ID.
+
+Every operarting sysrem has their own AMI. ==>> o.s install.
+
+security group :
+
+It is a virtual firewall at ec2 instance level..
+
+it contains set of rules..
+
+every application has their own port number..
+
+all ports in between ==>>> 0 to 65535
+
+ec2-user ( default user ) ===>> able to login we need to add a rule ==>> ssh ( mandatory)
+
+ssh ==>> port number ==>>> 22.
+
+http ==>> port number ==>> 80
+
+mysql ==>>> database ==>> 3306

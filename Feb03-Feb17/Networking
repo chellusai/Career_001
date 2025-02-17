@@ -1,0 +1,109 @@
+Each Linux servers has one Ipaddress along with one subnetmask..
+
+An Ip address is an 4 digit octal number 
+
+octal number ==>> 8.
+
+example Ipaddress ==>> 192.168.5.10
+
+Each ==>> digit / bit.
+
+4 * 8 = 32 bits..
+
+each bit or digit ==>> 2 power some thing.
+
+Each bit ==>> binaray format ==>> 010110
+
+We will decide Ipaddress ==>>> which class it will be avaible based on the first bit.
+
+Ipaddress class types:
+
+CLASS A : 0 to 127  ===>> 255.0.0.0 ==>> subnetmask ====>>> CIDR block ==>> /8
+
+CLASS B : 128 to 191 ===>> 255.255.0.0 ==>> sunbetmask ==>> CIDR block ==>> /16 ===>> VPC
+
+CLASS C : 192 to 223 ===>> 255.255.255.0 ==>> subnetmask ==>> CIDR block ==>> /24 ==>> subnet.
+
+CLASS D : R&D
+
+CLASS E : unused.
+
+127 + 64 ===>> 191
+
+191 + 32 ===>> 223
+
+CIDR block / notation ==>> we will decide the cidr notation based on the subnetmask..
+
+CIDR : classless interdomain route.
+
+An Ipaddress can be devided into two portions.
+
+1. Network portion ( static / constant)
+
+2. host portion ( dynamic and change)
+
+1. Network portion ( static / constant) ===>> first 2 bits or 3 bits.
+
+2. host portion ( dynamic and change) ==>> last 2 bits or 1 bit.
+
+our own network ==>>> how many Ipaddresses will relases and In this network ==>> how many ec2 instances will create.??
+
+ex: 30.50.10.40 ==>> SBI network 
+
+1. Network portion ( static / constant) ===>> first 2 bits  ==>> 2 power 16
+
+2. host portion ( dynamic and change) ==>> last 2 bits. ==>> 2 power 16 ===>> 500.
+
+30.50.10.40 ==>> SBI network ==>>> in this network 500 Ipaddresse release ==>> 500 ec2 instances will create in this SBI network..
+
+30.50.11.40
+
+30.50.12.40
+
+30.50.13.40
+
+30.50.14.40
+
+.
+.
+.
+
+30.50.300.40
+
+30.50.300.41
+
+30.50.300.42
+
+30.50.300.43
+.
+.
+.
+
+===========================================================================
+
+ex: 90.50.40.25 ==>> HDFC network 
+
+1. Network portion ( static / constant) ===>> first 3 bits  ==>> 2 power 24
+
+2. host portion ( dynamic and change) ==>> last 1 bits. ==>> 2 power 8 ===>> 256
+
+90.50.40.25 ==>> HDFC network ==>>> in this network 256 Ipaddresse release ==>> 256 ec2 instances will create in this HDFC network..
+
+90.50.40.26
+
+90.50.40.27
+
+90.50.40.28
+
+90.50.40.29
+
+90.50.40.30
+
+.
+.
+.
+
+90.50.40.281
+
+=====================================================================================
+
