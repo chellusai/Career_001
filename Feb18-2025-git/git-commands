@@ -1,0 +1,187 @@
+How to undo changes in working area ??
+
+file ==>> modify ==>> working area 
+
+git checkout filename.
+
+How to undo the changes in index/ staging area 
+
+file ==>> modify ==>> working area 
+
+git add . / filename / * ==>> index / staging area
+
+git reset filename
+
+How to undo the changes the in local repository.
+
+file ==>> modify ==>> working area 
+
+git add . / filename / * ==>> index / staging area.
+
+git commit -m 'b123'
+
+git log
+
+git reset commitid 
+
+========================================================================
+
+**** ===>>>> Branching strategies:<<===============
+
+1. master branch ===>>> default branch
+
+2. developement branch ( dev ) ==>>> every team has their own branch ==>> which is created from master branch.
+
+3. feture branch ==>> every developer has their own branch ==>> which is created from dev branch.
+
+4. hotfix / bugfix branch ==>> errors / bugs ===> which is created from master branch.===>> errors free ==>>> hotfix / bugfix branch will delete.
+
+5. Release branch.===>> every release has one branch with version ==>> which is created from master branch. ==>> once release push to remote ==>>  Release branch will delete.
+
+Branch : To develope the code of our project.
+
+How to create branch in locally ??
+
+git branch branchname
+
+How to push local branch remote ???
+
+git push origin branchname
+
+How to delete local branch
+
+git branch -d branchname
+
+How to delete remote branch 
+
+git push origin -d branchname
+
+How to go to inside a branch
+
+git checkout branchname
+
+===================================
+
+***** merging strayegies in locally ****
+
+1. fast-forward 
+
+2. twoway or recursive merge
+
+3. git rebase ( dangerous)
+
+===============================================================================
+
+git cherry-pick :
+
+It picks a commit from one branch and applys it to another branch with out doing merge.
+
+git cherry-pick commitid.
+
+==================================================================================
+
+How to merge the remote side changes ===>>> pull request.
+
+pull request ==>> remote side branches ==>>> github ===>> in between the branches ==>> merging is nothing but pull request.
+
+pull request ==>> TL / collegues ===>> approval ==>> merge pull request ==>> conform merge.
+
+pull request ==>>> source and destination 
+
+source ( right side ) and destination ( left side).
+
+==================================================================================
+
+tags : tags are used to release the application or code version or feture version.
+
+list of tags to see ==>> git tag
+
+how to create a tag locally ??
+
+git tag tagname
+
+git tag v1.0
+
+
+how to push local tag to remote 
+
+git push origin taganme
+
+git push origin v1.0
+
+
+tags are create on the perticular commit.
+
+git tag tagname commitid 
+
+tags are created from the master branch only..
+
+how to delete a tag locally
+
+git tag -d tagname
+
+how to delete remote tags
+
+git push origin -d tagname.
+
+=================================================================================
+
+git stash :
+
+bhargavi ==>> developer ==>> mno file ==>>> working area , index area ===>> before going to commit ==>> P1 ( priority one task ==>>> 2 hours close) .
+
+bharagavi ==>>> developer ==>>> mno file ==>>> tempararily save ==>> git statsh.
+
+after completion of the p1 task ==>> tempararily save ==>> unstash ==>> after that commit.
+
+git stash save ==>>> tempararily save 
+
+git stash list ==>> stash {0}
+
+git stash apply stashid stash {5} or git stash pop stashid stash {5} ==>> unstash
+
+git commit -m 'c1'
+
+git push origin master.
+
+===============================================================================================
+
+merge conflicts ( locally )
+
+ramakrishna ==>> developer
+
+siva ===>> developer
+
+both develoeprs are working on the same file ===>>> pqrs ===>> same line ==>> 151
+
+siva ==>> developer ==>> dev branch ==>>> merge ==>>> unable to merge.
+
+git merge tool
+
+pqrs ==>> will open ==>> 151 <<   >> ==>> brackets ==>>> remove the brackets
+
+pull request conflicts ( remote side)
+
+sekhar ==>> developer
+
+sundar ===>> developer
+
+both develoeprs are working on the same file ===>>> mno ===>> same line ==>> 351
+
+sundar ==>> developer ==>> dev branch ==>>> pullrequest ==>>> unable to pullrequest. ===>> resolve conflicats.
+
+mergeconflicts ===>>> click this ==>>>> mno ==>>> open 
+
+mno ==>> will open ==>> 351 <<   >> ==>> brackets ==>>> remove the brackets.
+
+===============================================================================================
+
+1. release branch
+
+2. pullrequest.
+
+3. tags 
+
+4. github ==>> backup.
+
+======================================================================================================
