@@ -1,0 +1,51 @@
+vpc peering :
+
+The main purpose of vpc peering is to communicate with different networks..
+
+Senario :
+
+application team ==>> 30.20.0.0/16
+
+admin team ==>> 60.20.0.0/16
+
+By making peering between these two teams ==>> files trasfter and remote userly application will install..
+
+VPC peering thumbrule :
+
+Both vpc's CIDR notations should not be collide to each other.
+
+VPC peering not supported transitive peering.
+
+vpc1 ==>>> vpc2 ==>> vpc3 ==>> vpc4
+
+vpc1 should not communicate with vpc3
+
+vpc2 should not communicate with vpc4.
+
+VPC peering ==>> who is the requester and accepter ===>> we will specify..
+
+key point : Both VPC CIDR notations are interchanged in both main routing tables..
+
+Then these two vpc's in between  ==>>> vpc peering connection established.
+
+VPC peering will be doing in 3 ways..
+
+1. same region.
+
+2. different region.
+
+3. different accounts / cross accounts..
+
+===============================================================================================
+
+[root@ip-30-20-9-42 ec2-user]# history
+    1  ping 60.20.6.13
+    2  vi /tmp/plugins.pem
+    3  chmod 700 /tmp/plugins.pem
+    4  touch peer1
+    5  scp -i /tmp/plugins.pem peer1 ec2-user@60.20.6.13:/home/ec2-user
+    6  ls
+    7  ssh -i /tmp/plugins.pem ec2-user@60.20.6.13
+    8  history
+[root@ip-30-20-9-42 ec2-user]#
+[root@ip-30-20-9-42 ec2-user]#
