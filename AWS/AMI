@@ -1,0 +1,32 @@
+
+AMI ==>>> Amazon machine image.
+
+AWS gives lot of default AMI's
+
+AMI ==>> It is a template , it contains the operating system and pre defined applications / softwares are installed on it.
+
+AMI ==>>> BAckup 
+
+we will create our own AMI's ==>> custom AMI's
+
+By default all custom AMI's are private.
+
+How to create our own AMI ??
+
+select ec2 instance ==>>> Actions ==>> images and templates ==>> create image ==>> bhargavi ==>> AMI will created.
+
+==>> we will create n no.of ec2 instances from one AMI.
+
+==>> when we create our own AMI then automatically creates one snapshot.
+
+===>> we create AMI's from snapshots.
+
+===>> default snapshots are stored in S3 buckets..
+
+==>> we will also copy AMI's and snapshots from one region to another region.
+
+ec2 instance ==>> AMI
+
+AMI ==>> EC2 instance
+
+SNAPSHOT ==>>> AMI 
