@@ -1,0 +1,15 @@
+VPC end points : with out having publicip though acesss other aws services by vpc end points.. ( automatically routing table -->>>change)
+
+private subnet --->> no internet access ---->>> NAT instance create --->>> privatesubnet --->> ec2 instance ( databse ) --->> s3 create buckets..
+
+AWS --->> storage --->>s3 -->>> simple storage service ---> buckets --->>create -->> objects -->>upload , download ,delete , rename..
+
+aws s3 ls 
+
+aws s3 mb s3://s3ram2
+
+
+
+
+
+role -->>> aws --->>> service1 (ec2)--->> comminicate with other service2 (s3) --->>then we need a role..
