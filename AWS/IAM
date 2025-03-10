@@ -1,0 +1,65 @@
+IAM : Identity Access Management 
+
+The purpose of IAM is to provide security to the AWS resources / services..
+
+1. users 
+
+2. groups 
+
+3. polocies ( permissions)
+
+4. roles 
+
+5. Identity providers ( Social websites like twitter , linked in , facebook..etc)
+
+6. MFA : Multifactor Authentication.
+
+1. users :
+
+How to create users in AWS ??
+
+there are two types of users in AWS.
+
+1. Admins ===>> AWS console access ( aws dashboard) ==>> username and passowrd./ MFA 
+
+2. Developers ==>>> code ===>> AWS CLI access ( programatic access ) ===>> access key ( username)  and secreate key ( password)
+
+password ==>> LDAP / AD ==>>> freetier ==>>> custom passowrd.==>>> we will create the password.
+
+user create ==>>> link generate and excel sheet also genarate ==>> email to us.
+
+2. groups  :
+
+no of users to adding the groups..
+
+3. polocies ( permissions)
+
+read , write , readonly , full .. administartor etc..
+
+AWS defaultly gives some policies ..
+
+By using policies ==>>> providing security to the AWS resources / services..
+
+we will create our own policies also...==>> custom policies..
+
+custom policies create. ==>> we will write json script ==>> developers..
+
+4. Roles :
+
+AWS ==>> one service will communicate with another service ==>> then we need to create a role.
+
+ec2 instance ( service1 ) and S3 ( service2 ) ==>> then we need to create a role..
+
+
+5. Identity providers :
+
+we will integrate with AWS a/c ==>> social media ==>> twitter , fb , linkedin..etc
+
+AWS ==>>> application ===>> business ==>>> online ==>> run ==>>> digital marketing..
+
+6. MFA : multifactor authentication
+
+1. mobile number ==>>> AWS a/c intergate ==>> login to aws a/c evry time ==>> otp ==>>> enter ==>> now you are in aws a/c.
+
+2. Google authenticator ==>> AWS a/c intergate ==>> login to aws a/c every time ==>> 6 digit==>>> enter ==>> now you are in aws a/c.
+

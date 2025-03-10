@@ -1,0 +1,8 @@
+region_name = "us-east-1"
+vpc_cidr_block = "100.0.0.0/16"
+vpc_name = "prod-vpc"
+igw_tag = "prod-igw" 
+subnet_cidr_block = "100.0.0.0/24"
+subnet_tag_name = "prod-subnet"
+rt_cidr_block = "0.0.0.0/0"
+rt_name = "prod-mrt"

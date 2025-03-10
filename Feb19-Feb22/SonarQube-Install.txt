@@ -1,0 +1,74 @@
+[root@ip-172-31-38-63 conf]# history
+    1  yum install -y java-1.8.0-openjdk-devel.x86_64
+
+yum search java | grep -i java17
+          yum install java-17-amazon-corretto.x86_64 -y 
+
+===========================================================================================
+
+#Install Java 17 (Amazon Corretto) to support SonarQube 
+sudo yum install java-17-amazon-corretto -y 
+
+#Create a new user 'sonar' which will run SonarQube 
+sudo useradd sonar 
+#Edit the sudoers file to allow the 'sonar' user to run commands without a password sudo visudo 
+#Add the following line in the visudo editor: 
+# sonar ALL=(ALL) NOPASSWD: ALL 
+# This allows the 'sonar' user to run any command without being prompted for a password 
+#Change to the /opt directory where SonarQube will be installed cd /opt/
+# Download the SonarQube zip file from the official source 
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.8.100196.zip 
+#Unzip the SonarQube zip file sudo unzip sonarqube-9.9.8.100196.zip 
+#Change the ownership of the SonarQube folder to the 'sonar' user and group sudo chown -R sonar: sonar /opt/sonarqube-9.9.8.100196 
+# Set the appropriate permissions for the SonarQube folder 
+# This grants read, write, and execute permissions for the owner and group, and read and execute permissions 
+sudo chmod -R 775 /opt/sonarqube-9.9.8.100196
+
+# Switch to the 'sonar' user to run SonarQube 
+sudo su sonar 
+
+# Navigate to the SonarQube bin directory for your architecture 
+cd /opt/sonarqube-9.9.8.100196/bin/linux-x86-64 
+# Start SonarQube 
+sh sonar.sh start
+
+=====================================================================================
+
+
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.zip
+
+    2  sudo wget -O /etc/yum.repos.d/sonar.repo http://downloads.sourceforge.net/project/sonar-pkg/rpm/sonar.repo
+    3  ls
+    4  sudo yum install sonar -y
+    5  service sonar start
+
+
+    6  cd /
+    7  ls
+    8  cd opt/
+    9  ls
+   10  cd sonar/
+   11  ls
+   12  cd conf/
+   13  ls
+   14  vi sonar.properties
+   15  service sonar stop
+   16  service sonar start
+   17  history
+[root@ip-172-31-38-63 conf]#
+
+
+prasad: e6b2a667db6ed40a5f3468b6699d9674437b620a
+
+
+prashu: e81ff17f9753d6f6d91db034a4ef0abd2cffdc7d
+
+
+ramu: 22608e97b4ed92f651828c05b072048254c1af4a
+
+
+rajasekahar: bc5cac6fd7250fed93469f76384333ff869214cc
+===============================================================================================
+
+
+

@@ -1,0 +1,17 @@
+Transite gateway :
+
+The main purpose of Transite gateway is to communicate with different networks.
+
+Transite gateway thumb rule :
+
+Both vpc's CIDR notations should not be collide to each other.
+
+Transitegateway supports transtive peering..
+
+vpc1 ==>> vpc2 ==> vpc3 ==>> vpc4
+
+create transitegatway ==>> when ever you created TGW ==>>> then automatically transitgateway routing tables will create.
+
+next we will TGWattachments for every vpc (infrastructure)
+
+key point : ALL VPC CIDR notations are interchanged in ALL main routing tables..

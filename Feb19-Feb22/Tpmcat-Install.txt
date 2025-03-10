@@ -1,0 +1,28 @@
+ 1  sudo yum install -y java-1.8.0-openjdk-devel.x86_64
+
+yum search java | grep -i java17
+          yum install java-17-amazon-corretto.x86_64 -y 
+
+/opt
+
+2. Tomcat Install
+ sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100.tar.gz
+
+3 .tar -xvf apache-tomcat-9.0.100.tar.gz
+
+4. mv apache-tomcat-9.0.100 tomcat9
+
+5. chmod 777 /opt/tomcat9/webapp
+
+/opt/tomcat9/webapp/manager/META-INFA/context.xml
+   delete the value & allow tag /
+
+6. /opt/tomcat9/conf/tomcat.user.xml/
+      add tomcat user
+
+<user username="tomcat" password="tomcat" roles="manager-gui,manager-script"/>
+
+7. /opt/tomcat9/bin
+sh startup.sh
+
+Tomcat Start
